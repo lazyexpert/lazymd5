@@ -20,7 +20,7 @@ function crypt(data) {
 }
 
 function cryptString(data, salt) {
-  let copy = data.split("").join("")
+  let copy = data
   if( typeof salt !== "undefined" )
     copy += salt
   return crypt(copy)

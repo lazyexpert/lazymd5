@@ -1,7 +1,11 @@
 # lazymd5
-Generates md5 + salt. No dependencies.
-Guarantee object's property order.
-Can accept object, string, anything(cast to string);
+Generates md5. More secure than usual md5 method, because of salt usage. No dependencies.
+
+Can accept object, string, anything(cast to string).
+
+If used with object - the library can guarantee the objects properties order.
+
+p.s.: usual object cannot guarantee the order of the properties.
 
 
 # Install
