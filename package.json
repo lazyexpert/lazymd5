@@ -1,0 +1,25 @@
+{
+  "name": "lazymd5",
+  "version": "0.0.1",
+  "description": "md5 + salt + object's properties order guarantee",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lazyexpert/lazymd5.git"
+  },
+  "keywords": [
+    "md5",
+    "crypto",
+    "salt",
+    "md5node"
+  ],
+  "author": "lazyexpert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lazyexpert/lazymd5/issues"
+  },
+  "homepage": "https://github.com/lazyexpert/lazymd5#readme"
+}
