@@ -3,6 +3,18 @@ Generates md5 + salt. No dependencies.
 Guarantee object's property order.
 Can accept object, string, anything(cast to string);
 
+
+# Install
+```
+npm install --save lazymd5
+```
+
+# Test
+```
+npm test
+```
+
+# Usage
 Example usage:
 ``` javascript
 let md5 = require('lazymd5')
