@@ -21,49 +21,55 @@ npm test
 # Usage
 Example usage:
 ``` javascript
-let md5 = require('lazymd5')
+const md5 = require('lazymd5')
 
-let data = { a: 1, b: 2}
-
-let hash = md5(data, "ololol")
-data.md5 = hash
-
+const hash = md5({
+  salt : "ololo",
+  data : { a: 1, b: 2}
+})
 ```
 
 
 Passing in string or anything else:
 ``` javascript
-md5("5", "salty") === md5(5, "salty") // true
+md5({ salt : "salty", data : "5"}) === md5({ salt : "salty", data : 5 }) // true
 ```
 
 
 Salt is optional argument. This will still work (but is recommended to pass salt):
 ``` javascript
-let md5 = require('lazymd5')
+const md5 = require('lazymd5')
 
-let data = { a: 1, b: 2}
-
-let hash = md5(data)
-data.md5 = hash
+const hash = md5({data : { a: 1, b: 2}})
 ```
 
+# Options object:
+- data - required. Iterable || Object || String || Anything else(being casted to string)
+- salt - optional, but highly recommended
+- success - optional. Callback for success. Might be required if passed async functions
+- error - optional. Callback for error. Might be required if passed async functions
+
+## Iterables
+Any objects that implement iterators (Arrays too). Can be async. The return value of operating with iterables will be array of objects:
+- value - initial data or casted to string
+- md5 - hash
 
 # Advanced (for mapping)
 ## If passed object:
 - create Map
 - sort keys of Object
 - push sorted keys' values to Map
-- add Salt to Map, if exists
+- add Salt to Map, if provided
 - create md5 of Map object
 
 ## If passed string:
 - create copy
-- concatenate with salt
+- concatenate with salt, if provided
 - create md5
 
 ## If passed anything else:
 - warning is being produced
 - casted to string
 - create copy
-- concatenate with salt
+- concatenate with salt, if provided
 - create md5
