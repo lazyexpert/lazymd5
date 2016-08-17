@@ -50,11 +50,14 @@ const hash = md5({data : { a: 1, b: 2}})
 - error - optional. Callback for error. Might be required if passed async functions
 
 ## Iterables
-Any objects that implement iterators (Arrays too). Can be async. The return value of operating with iterables will be array of objects:
+Any objects that implement iterators (Arrays too). The return value of operating with iterables will be array of objects:
 - value - initial data or casted to string
 - md5 - hash
 
 # Advanced (for mapping)
+## If passed iterable object:
+- we pull values and for each perform the correct algorithm
+
 ## If passed object:
 - create Map
 - sort keys of Object
