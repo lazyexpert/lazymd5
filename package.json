@@ -1,6 +1,6 @@
 {
   "name": "lazymd5",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "md5 + salt + object's properties order guarantee",
   "main": "index.js",
   "scripts": {
