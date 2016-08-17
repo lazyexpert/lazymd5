@@ -46,8 +46,6 @@ const hash = md5({data : { a: 1, b: 2}})
 # Options object:
 - data - required. Iterable || Object || String || Anything else(being casted to string)
 - salt - optional, but highly recommended
-- success - optional. Callback for success. Might be required if passed async functions
-- error - optional. Callback for error. Might be required if passed async functions
 
 ## Iterables
 Any objects that implement iterators (Arrays too). The return value of operating with iterables will be array of objects:
